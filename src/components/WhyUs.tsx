@@ -46,7 +46,7 @@ const cardVariant: Variants = {
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="section-gray py-20 lg:py-28">
+    <section id="why-us" className="section-gray py-16 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
@@ -54,18 +54,18 @@ export default function WhyUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+          className="text-center mb-10 lg:mb-14"
         >
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#F97316] mb-3">Our Advantage</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] mb-4">Why Choose Us?</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] mb-4">Why Choose Us?</h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base">
             Thousands of families and businesses trust Manikanta Logistics for every move — here&apos;s why.
           </p>
           <div className="w-16 h-1 bg-[#F97316] mx-auto rounded-full mt-5" />
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid — 1-col on xs, 2-col sm, 3-col lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}
@@ -75,14 +75,15 @@ export default function WhyUs() {
               viewport={{ once: true, margin: '-60px' }}
               variants={cardVariant}
               whileHover={{ y: -4 }}
-              className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex gap-5"
+              whileTap={{ scale: 0.97 }}
+              className="bg-white rounded-2xl p-5 sm:p-7 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex gap-4 sm:gap-5"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#F97316]/10 text-2xl flex items-center justify-center">
+              <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#F97316]/10 text-xl sm:text-2xl flex items-center justify-center">
                 {feature.icon}
               </div>
               <div>
-                <h3 className="font-bold text-[#0F172A] text-base mb-2">{feature.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{feature.desc}</p>
+                <h3 className="font-bold text-[#0F172A] text-sm sm:text-base mb-1.5">{feature.title}</h3>
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">{feature.desc}</p>
               </div>
             </motion.div>
           ))}

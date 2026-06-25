@@ -32,7 +32,7 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="section-light py-20 lg:py-28">
+    <section id="testimonials" className="section-light py-16 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
@@ -40,18 +40,18 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+          className="text-center mb-10 lg:mb-14"
         >
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#F97316] mb-3">Happy Customers</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] mb-4">What Our Customers Say</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] mb-4">What Our Customers Say</h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base">
             Real reviews from real customers who trusted us with their most important moves.
           </p>
           <div className="w-16 h-1 bg-[#F97316] mx-auto rounded-full mt-5" />
         </motion.div>
 
-        {/* Cards — horizontal scroll on mobile, grid on desktop */}
-        <div className="flex overflow-x-auto gap-6 pb-6 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible snap-x snap-mandatory scrollbar-thin">
+        {/* Swipeable horizontal carousel on mobile, grid on sm+ */}
+        <div className="flex overflow-x-auto gap-4 sm:gap-6 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible snap-x snap-mandatory no-scrollbar">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.id}
@@ -61,11 +61,12 @@ export default function Testimonials() {
               viewport={{ once: true, margin: '-60px' }}
               variants={cardVariant}
               whileHover={{ y: -4 }}
-              className="min-w-[82vw] sm:min-w-0 snap-start bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              whileTap={{ scale: 0.98 }}
+              className="min-w-[80vw] sm:min-w-0 snap-start bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Rating and Service Details */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
                   <StarRating rating={t.rating} />
                   <span className="text-[10px] font-bold text-[#F97316] bg-[#F97316]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                     {t.service}
@@ -73,9 +74,9 @@ export default function Testimonials() {
                 </div>
 
                 {/* Quote icon */}
-                <div className="text-4xl text-[#F97316]/30 font-serif leading-none mb-1">&ldquo;</div>
+                <div className="text-3xl sm:text-4xl text-[#F97316]/30 font-serif leading-none mb-1">&ldquo;</div>
 
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 italic">{t.review}</p>
+                <p className="text-gray-600 text-sm sm:text-sm leading-relaxed mb-5 sm:mb-6 italic">{t.review}</p>
               </div>
 
               <div className="pt-4 border-t border-gray-500/10 flex items-center gap-3">

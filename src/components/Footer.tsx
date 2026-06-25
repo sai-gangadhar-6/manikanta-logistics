@@ -10,9 +10,9 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-[#0F172A] text-white pt-14 pb-8">
+    <footer className="bg-[#0F172A] text-white pt-12 sm:pt-14 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-10 mb-10 sm:mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -42,14 +42,14 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-bold text-sm uppercase tracking-widest mb-5 text-gray-300">Quick Links</h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-[#F97316] text-sm transition-colors duration-200 flex items-center gap-2"
+                    className="flex items-center gap-2 text-gray-400 hover:text-[#F97316] text-sm transition-colors duration-200 py-2 min-h-[44px] hover:pl-1"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[#F97316]" />
+                    <span className="w-1 h-1 rounded-full bg-[#F97316] flex-shrink-0" />
                     {link.label}
                   </a>
                 </li>
@@ -60,22 +60,22 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="font-bold text-sm uppercase tracking-widest mb-5 text-gray-300">Contact</h3>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               <li>
-                <a href="tel:+919052722229" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-200 group">
-                  <span className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-[#F97316]/20 flex items-center justify-center text-sm transition-colors duration-200">📞</span>
+                <a href="tel:+919052722229" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-200 group min-h-[44px]">
+                  <span className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-[#F97316]/20 flex items-center justify-center text-sm transition-colors duration-200 flex-shrink-0">📞</span>
                   <span className="text-sm">+91 9052722229</span>
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/917382355966" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-200 group">
-                  <span className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-green-500/20 flex items-center justify-center text-sm transition-colors duration-200">💬</span>
+                <a href="https://wa.me/917382355966" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-200 group min-h-[44px]">
+                  <span className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-green-500/20 flex items-center justify-center text-sm transition-colors duration-200 flex-shrink-0">💬</span>
                   <span className="text-sm">WhatsApp Us</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:manikantapackersandmovers@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-200 group">
-                  <span className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-[#F97316]/20 flex items-center justify-center text-sm transition-colors duration-200">✉️</span>
+                <a href="mailto:manikantapackersandmovers@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-200 group min-h-[44px]">
+                  <span className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-[#F97316]/20 flex items-center justify-center text-sm transition-colors duration-200 flex-shrink-0">✉️</span>
                   <span className="text-sm text-xs leading-tight">manikantapackers<br/>andmovers@gmail.com</span>
                 </a>
               </li>
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
 
         {/* Divider & Copyright */}
-        <div className="border-t border-white/10 pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-gray-500 text-xs">
+        <div className="border-t border-white/10 pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-gray-500 text-xs text-center sm:text-left">
           <p>© {currentYear} Manikanta Logistics. All rights reserved.</p>
           <p>Made with ❤️ for stress-free moves across India</p>
         </div>

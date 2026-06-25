@@ -93,10 +93,10 @@ export default function EnquiryForm() {
   const inputClass = (field: keyof Errors) =>
     `w-full border-2 ${
       errors[field] ? 'border-red-400' : 'border-gray-200 focus:border-[#F97316]'
-    } rounded-xl px-4 py-3.5 text-sm text-gray-800 bg-white placeholder-gray-400 outline-none transition-colors duration-200`
+    } rounded-xl px-4 py-3.5 text-sm text-gray-800 bg-white placeholder-gray-400 outline-none transition-colors duration-200 min-h-[52px]`
 
   return (
-    <section id="enquiry" className="section-gray py-20 lg:py-28">
+    <section id="enquiry" className="section-gray py-16 lg:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
@@ -104,10 +104,10 @@ export default function EnquiryForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#F97316] mb-3">Get In Touch</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] mb-4">Request a Free Quote</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] mb-4">Request a Free Quote</h2>
           <p className="text-gray-500 text-sm sm:text-base">
             Fill in the details below and we&apos;ll send you a quote directly on WhatsApp.
           </p>
@@ -119,7 +119,7 @@ export default function EnquiryForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 sm:p-10 relative overflow-hidden"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-5 sm:p-7 lg:p-10 relative overflow-hidden"
         >
           {/* Success Toast */}
           <AnimatePresence>
@@ -145,7 +145,7 @@ export default function EnquiryForm() {
           </AnimatePresence>
 
           <form onSubmit={handleSubmit} noValidate id="enquiry-form">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {/* Name */}
               <div>
                 <label htmlFor="enquiry-name" className="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">
@@ -159,6 +159,7 @@ export default function EnquiryForm() {
                   placeholder="Your full name"
                   className={inputClass('name')}
                   autoComplete="name"
+                  enterKeyHint="next"
                 />
                 {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
               </div>
@@ -171,12 +172,14 @@ export default function EnquiryForm() {
                 <input
                   id="enquiry-phone"
                   type="tel"
+                  inputMode="numeric"
                   value={form.phone}
                   onChange={(e) => handleChange('phone', e.target.value)}
                   placeholder="10-digit mobile number"
                   className={inputClass('phone')}
                   autoComplete="tel"
                   maxLength={10}
+                  enterKeyHint="next"
                 />
                 {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
               </div>
@@ -193,6 +196,7 @@ export default function EnquiryForm() {
                   onChange={(e) => handleChange('from', e.target.value)}
                   placeholder="City / Area"
                   className={inputClass('from')}
+                  enterKeyHint="next"
                 />
                 {errors.from && <p className="text-red-500 text-xs mt-1">{errors.from}</p>}
               </div>
@@ -209,6 +213,7 @@ export default function EnquiryForm() {
                   onChange={(e) => handleChange('to', e.target.value)}
                   placeholder="City / Area"
                   className={inputClass('to')}
+                  enterKeyHint="next"
                 />
                 {errors.to && <p className="text-red-500 text-xs mt-1">{errors.to}</p>}
               </div>
@@ -251,7 +256,7 @@ export default function EnquiryForm() {
             <button
               type="submit"
               id="enquiry-submit-btn"
-              className="mt-6 w-full flex items-center justify-center gap-2.5 bg-green-500 hover:bg-green-600 text-white font-bold text-base py-4 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-200"
+              className="mt-5 sm:mt-6 w-full flex items-center justify-center gap-2.5 bg-green-500 hover:bg-green-600 text-white font-bold text-base py-4 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-200 min-h-[52px]"
             >
               💬 Send Enquiry on WhatsApp
             </button>
