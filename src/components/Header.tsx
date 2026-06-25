@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -84,10 +84,10 @@ export default function Header() {
       >
         <div className="container-wide flex items-center justify-between gap-4">
 
-          {/* ── Wordmark ── */}
+          {/* â”€â”€ Wordmark â”€â”€ */}
           <a
             href="#home"
-            aria-label="Manikanta Logistics – Home"
+            aria-label="Manikanta Logistics â€“ Home"
             className="flex items-center gap-2.5 flex-shrink-0 group"
           >
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-orange-500 group-hover:bg-orange-600 transition-colors duration-200 flex items-center justify-center shadow-md">
@@ -99,7 +99,7 @@ export default function Header() {
             </div>
           </a>
 
-          {/* ── Desktop Nav ── */}
+          {/* â”€â”€ Desktop Nav â”€â”€ */}
           <nav
             aria-label="Main navigation"
             className="hidden xl:flex items-center gap-1"
@@ -108,20 +108,20 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[13px] font-medium text-slate-300 hover:text-white px-3 py-2 rounded-lg hover:bg-white/8 transition-all duration-150"
+                className="text-[13px] font-medium text-slate-300 hover:text-white px-3 py-2 rounded-lg hover:bg-white/[0.08] transition-all duration-150"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* ── Desktop CTAs ── */}
+          {/* â”€â”€ Desktop CTAs â”€â”€ */}
           <div className="hidden lg:flex items-center gap-2.5 flex-shrink-0">
             <a
               href={TEL_LINK}
               id="header-call-btn"
               aria-label="Call us now"
-              className="btn-secondary !py-2.5 !px-4 !text-xs !bg-white/8 !border-white/20 !text-white hover:!bg-white/15"
+              className="btn-secondary !py-2.5 !px-4 !text-xs !bg-white/[0.08] !border-white/20 !text-white hover:!bg-white/15"
             >
               <Icons.phone className="w-3.5 h-3.5" />
               +91 90527 22229
@@ -136,7 +136,7 @@ export default function Header() {
             </a>
           </div>
 
-          {/* ── Mobile: quick call + hamburger ── */}
+          {/* â”€â”€ Mobile: quick call + hamburger â”€â”€ */}
           <div className="flex lg:hidden items-center gap-3">
             <a
               href={TEL_LINK}
@@ -181,7 +181,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* ── Full-Screen Mobile Drawer ── */}
+      {/* â”€â”€ Full-Screen Mobile Drawer â”€â”€ */}
       <AnimatePresence>
         {menuOpen && (
           <>
@@ -230,7 +230,7 @@ export default function Header() {
                 </button>
               </div>
 
-              {/* Nav Links — scrollable */}
+              {/* Nav Links â€” scrollable */}
               <div className="flex-1 overflow-y-auto py-3 px-3">
                 {navLinks.map((link, i) => (
                   <motion.a
@@ -241,7 +241,7 @@ export default function Header() {
                     variants={linkVariants}
                     initial="hidden"
                     animate="visible"
-                    className="flex items-center justify-between py-3.5 px-4 rounded-xl text-slate-200 hover:text-white hover:bg-white/8 font-medium transition-all duration-150 min-h-[52px]"
+                    className="flex items-center justify-between py-3.5 px-4 rounded-xl text-slate-200 hover:text-white hover:bg-white/[0.08] font-medium transition-all duration-150 min-h-[52px]"
                   >
                     <span>{link.label}</span>
                     <Icons.chevronRight className="w-4 h-4 text-slate-500 flex-shrink-0" />
@@ -249,7 +249,7 @@ export default function Header() {
                 ))}
               </div>
 
-              {/* Drawer CTAs — pinned bottom */}
+              {/* Drawer CTAs â€” pinned bottom */}
               <div className="px-4 py-4 border-t border-white/10 space-y-3 flex-shrink-0 pb-safe">
                 <a
                   href={WA_LINK}
@@ -258,12 +258,12 @@ export default function Header() {
                   onClick={closeMenu}
                   className="flex items-center justify-center gap-2.5 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3.5 rounded-xl transition-colors duration-200 min-h-[52px]"
                 >
-                  💬 WhatsApp Us
+                  ðŸ’¬ WhatsApp Us
                 </a>
                 <a
                   href={TEL_LINK}
                   onClick={closeMenu}
-                  className="flex items-center justify-center gap-2.5 w-full border border-white/20 text-white font-semibold py-3.5 rounded-xl hover:bg-white/8 transition-colors duration-200 min-h-[52px]"
+                  className="flex items-center justify-center gap-2.5 w-full border border-white/20 text-white font-semibold py-3.5 rounded-xl hover:bg-white/[0.08] transition-colors duration-200 min-h-[52px]"
                 >
                   <Icons.phone className="w-4 h-4" />
                   +91 90527 22229

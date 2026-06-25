@@ -67,7 +67,7 @@ export default function Hero() {
             className="text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-3"
           >
             Manikanta{' '}
-            <span className="gradient-text">Logistics</span>
+            <span className="text-gradient">Logistics</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -90,7 +90,7 @@ export default function Hero() {
           {/* CTAs — stacked on mobile, row from ~480px */}
           <motion.div
             variants={fadeUp}
-            className="flex flex-col [480px]:flex-row gap-3 sm:flex-row justify-center mb-8"
+            className="flex flex-col gap-3 sm:flex-row justify-center mb-8"
           >
             <a
               href="tel:+919052722229"
