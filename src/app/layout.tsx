@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import PWAController from '@/components/PWAController'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -11,6 +12,12 @@ const siteUrl = 'https://manikanta-logistics.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    title: 'Manikanta',
+    statusBarStyle: 'default',
+  },
   title: {
     default: 'Manikanta Logistics – Trusted Packers & Movers | Safe, Reliable & Affordable',
     template: '%s | Manikanta Logistics',
@@ -145,7 +152,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.className} bg-white text-slate-700 antialiased`}>{children}</body>
+      <body className={`${inter.className} bg-white text-slate-700 antialiased`}>
+        {children}
+        <PWAController />
+      </body>
     </html>
   )
 }

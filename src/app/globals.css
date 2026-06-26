@@ -177,3 +177,15 @@ body {
 .stat-suffix {
   @apply text-4xl sm:text-5xl font-extrabold text-orange-500;
 }
+
+/* ─── Safe Area dynamic top padding for header & drawer ────── */
+.pt-header-normal {
+  padding-top: calc(1.25rem + env(safe-area-inset-top, 0px));
+}
+.pt-header-scrolled {
+  padding-top: calc(0.75rem + env(safe-area-inset-top, 0px));
+}
+.pt-drawer-header {
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+}
+

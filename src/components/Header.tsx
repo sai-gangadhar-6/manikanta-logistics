@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -78,8 +78,8 @@ export default function Header() {
         role="banner"
         className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-slate-900/95 backdrop-blur-xl shadow-lg border-b border-white/10 py-3'
-            : 'bg-transparent py-5'
+            ? 'bg-slate-900/95 backdrop-blur-xl shadow-lg border-b border-white/10 pb-3 pt-header-scrolled'
+            : 'bg-transparent pb-5 pt-header-normal'
         }`}
       >
         <div className="container-wide flex items-center justify-between gap-4">
@@ -211,7 +211,7 @@ export default function Header() {
               aria-label="Navigation menu"
             >
               {/* Drawer header */}
-              <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 flex-shrink-0">
+              <div className="flex items-center justify-between px-5 pb-4 pt-drawer-header border-b border-white/10 flex-shrink-0">
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center">
                     <Icons.truck className="w-4 h-4 text-white" strokeWidth={2} />
