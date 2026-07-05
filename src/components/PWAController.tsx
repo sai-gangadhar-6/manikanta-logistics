@@ -86,7 +86,7 @@ export default function PWAController() {
             </svg>
           </div>
           <div>
-            <h2 className="font-bold text-sm tracking-tight text-white leading-tight">Manikanta Logistics</h2>
+            <h2 className="font-bold text-sm tracking-tight text-white leading-tight">Manikanta Packers & Movers</h2>
             <p className="text-[10px] text-orange-400 font-semibold uppercase tracking-wider mt-0.5">Packers & Movers</p>
           </div>
         </div>

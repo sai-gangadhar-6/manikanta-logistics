@@ -2,13 +2,15 @@
 
 import { useState, FormEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Check } from 'lucide-react'
 
 const serviceOptions = [
   'Home Shifting',
   'Office Relocation',
   'Local Shifting',
-  'Intercity Moving',
-  'Vehicle Transportation',
+  'Interstate Moving',
+  'Bike Transport',
+  'Car Transport',
   'Packing & Unpacking',
   'Loading & Unloading',
   'Storage Solutions',
@@ -62,7 +64,7 @@ export default function EnquiryForm() {
     setSubmitted(true)
 
     const msg = [
-      `🚚 *New Enquiry — Manikanta Logistics*`,
+      `🚚 *New Enquiry — Manikanta Packers & Movers*`,
       ``,
       `👤 *Name:* ${form.name}`,
       `📞 *Phone:* ${form.phone}`,
@@ -92,8 +94,8 @@ export default function EnquiryForm() {
 
   const inputClass = (field: keyof Errors) =>
     `w-full border-2 ${
-      errors[field] ? 'border-red-400' : 'border-gray-200 focus:border-[#F97316]'
-    } rounded-xl px-4 py-3.5 text-sm text-gray-800 bg-white placeholder-gray-400 outline-none transition-colors duration-200 min-h-[52px]`
+      errors[field] ? 'border-red-400 focus:border-red-400 focus:ring-2 focus:ring-red-400/20' : 'border-gray-300 focus:border-[#F97316] focus:ring-2 focus:ring-[#F97316]/20'
+    } rounded-xl px-4 py-3.5 text-sm text-gray-800 bg-white placeholder-gray-500 outline-none transition-all duration-200 min-h-[48px]`
 
   return (
     <section id="enquiry" className="section-gray py-16 lg:py-28">
@@ -134,9 +136,9 @@ export default function EnquiryForm() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: 'spring', duration: 0.4 }}
-                  className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-3xl mb-4"
+                  className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4 text-green-600"
                 >
-                  ✅
+                  <Check className="w-8 h-8" strokeWidth={2.5} />
                 </motion.div>
                 <p className="text-xl font-bold text-[#0F172A]">Redirecting to WhatsApp...</p>
                 <p className="text-gray-500 text-sm mt-1">Your enquiry is being sent!</p>
@@ -145,7 +147,7 @@ export default function EnquiryForm() {
           </AnimatePresence>
 
           <form onSubmit={handleSubmit} noValidate id="enquiry-form">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
               {/* Name */}
               <div>
                 <label htmlFor="enquiry-name" className="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">
@@ -248,18 +250,20 @@ export default function EnquiryForm() {
                   value={form.message}
                   onChange={(e) => handleChange('message', e.target.value)}
                   placeholder="Any specific requirements or questions?"
-                  className="w-full border-2 border-gray-200 focus:border-[#F97316] rounded-xl px-4 py-3.5 text-sm text-gray-800 bg-white placeholder-gray-400 outline-none transition-colors duration-200 resize-none"
+                  className="w-full border-2 border-gray-300 focus:border-[#F97316] focus:ring-2 focus:ring-[#F97316]/20 rounded-xl px-4 py-3.5 text-sm text-gray-800 bg-white placeholder-gray-500 outline-none transition-all duration-200 resize-none"
                 />
               </div>
             </div>
 
-            <button
-              type="submit"
-              id="enquiry-submit-btn"
-              className="mt-5 sm:mt-6 w-full flex items-center justify-center gap-2.5 bg-green-500 hover:bg-green-600 text-white font-bold text-base py-4 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-200 min-h-[52px]"
-            >
-              💬 Send Enquiry on WhatsApp
-            </button>
+            <div className="mt-6 flex justify-center">
+              <button
+                type="submit"
+                id="enquiry-submit-btn"
+                className="w-full sm:w-auto sm:px-12 flex items-center justify-center gap-2.5 bg-green-500 hover:bg-green-600 text-white font-bold text-base py-4 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-200 min-h-[52px]"
+              >
+                💬 Send Enquiry on WhatsApp
+              </button>
+            </div>
 
             <p className="text-center text-gray-400 text-xs mt-4">
               Your details will be sent directly to our WhatsApp. No spam, ever.

@@ -28,7 +28,7 @@ export const testimonials: Testimonial[] = [
     service: 'Home Shifting',
     rating: 5,
     review:
-      'I was dreading the move but Manikanta Logistics made it completely effortless. Their coordinator kept me updated at every stage, the movers were polite and professional, and they finished two hours ahead of schedule. Five stars without hesitation.',
+      'I was dreading the move but Manikanta Packers & Movers made it completely effortless. Their coordinator kept me updated at every stage, the movers were polite and professional, and they finished two hours ahead of schedule. Five stars without hesitation.',
     initials: 'PS',
     avatarColor: 'bg-purple-600',
   },
@@ -64,5 +64,16 @@ export const testimonials: Testimonial[] = [
       'Used their storage facility for 3 weeks while our new home was being painted. The warehouse was clean, well-maintained, and the goods came back in perfect condition. Reasonable pricing and very cooperative team throughout.',
     initials: 'MI',
     avatarColor: 'bg-amber-600',
+  },
+  {
+    id: 't6',
+    name: 'Deepak Rao',
+    city: 'Bengaluru → Chennai',
+    service: 'Home Shifting',
+    rating: 5,
+    review:
+      'Very professional shifting service. The packing team was disciplined, wrapped all my electronic appliances with foam and bubble wrap, and loaded them with care. The truck arrived exactly on time in Chennai without any delays. Highly recommended!',
+    initials: 'DR',
+    avatarColor: 'bg-indigo-600',
   },
 ]

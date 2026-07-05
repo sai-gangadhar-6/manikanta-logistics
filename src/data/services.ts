@@ -4,6 +4,9 @@ export interface Service {
   title: string
   shortDesc: string
   description: string
+  whatsIncluded: string[]
+  estimatedTime: string
+  vehicleType: string
 }
 
 export const services: Service[] = [
@@ -13,7 +16,15 @@ export const services: Service[] = [
     title: 'Home Shifting',
     shortDesc: 'Complete household relocation handled with care.',
     description:
-      'From studios to large villas, we manage every detail of your home move. Our trained crew carefully packs, loads, transports, and unpacks every item — fragile or heavy — at your new address.',
+      'From studio apartments to large multi-story villas, we manage every detail of your residential move. Our fully trained crew handles the careful packing, heavy lifting, loading, transit, and final unpacking at your new home.',
+    whatsIncluded: [
+      'Multi-layer bubble wrap & heavy-duty cartons',
+      'Experienced 4-6 member packing crew',
+      'Full dismantling & reassembly of large furniture',
+      'Transit insurance facilitation & claims assistance',
+    ],
+    estimatedTime: '1 – 2 Days',
+    vehicleType: 'Tata 407 / DCM Toyota Container',
   },
   {
     id: 'office-relocation',
@@ -21,7 +32,15 @@ export const services: Service[] = [
     title: 'Office Relocation',
     shortDesc: 'Seamless business moves with minimal downtime.',
     description:
-      'We understand that every hour of downtime costs money. Our commercial relocation team works efficiently — often overnight or on weekends — to shift your entire office setup with zero disruption to operations.',
+      'We understand that business continuity is critical. Our dedicated commercial relocation teams work efficiently — often during weekends or overnight — to pack and shift IT systems, desks, and documents with minimal disruption.',
+    whatsIncluded: [
+      'IT equipment & server safe-packing boxes',
+      'Workstation disassembly & modular setup support',
+      'Color-coded file and department labeling system',
+      'Dedicated corporate move manager on-site',
+    ],
+    estimatedTime: '1 – 3 Days (Weekend Shifting Available)',
+    vehicleType: 'Dedicated Large Closed Container Truck',
   },
   {
     id: 'local-shifting',
@@ -29,7 +48,15 @@ export const services: Service[] = [
     title: 'Local Shifting',
     shortDesc: 'Fast, affordable within-city moves.',
     description:
-      'Moving across the same city? Our local shifting service is quick, cost-effective, and stress-free. Whether it\'s a single room or a full household, we dispatch the right vehicle and crew for the job.',
+      'Moving across the street or to another neighborhood in the same city? Our local shifting service is quick, budget-friendly, and completely stress-free, matching the perfect truck size to your load.',
+    whatsIncluded: [
+      'Standard bubble wrap & packing blankets',
+      'Professional 2-3 member shifting team',
+      'Loading, local transit & safe unloading',
+      'Basic furniture positioning at new location',
+    ],
+    estimatedTime: '4 – 8 Hours (Same-Day Shifting)',
+    vehicleType: 'Tata Ace / Tata 407 (Open or Closed)',
   },
   {
     id: 'interstate-moving',
@@ -37,7 +64,15 @@ export const services: Service[] = [
     title: 'Interstate Moving',
     shortDesc: 'Safe long-distance transport across India.',
     description:
-      'Our GPS-tracked fleet handles interstate relocations across all major Indian cities and towns. We use multi-layer packing for long-haul trips and provide regular updates throughout the journey.',
+      'Moving to a different state? Our long-haul closed container trucks relocate your household goods anywhere in India, secured against highway vibrations and weather elements with real-time tracking updates.',
+    whatsIncluded: [
+      'Ultra-secure multi-layer packing (5-layer wrap)',
+      'High-grade waterproof closed containers',
+      'Transit insurance coverage included',
+      'Regular route coordinator updates',
+    ],
+    estimatedTime: '3 – 7 Days (Depending on Destination)',
+    vehicleType: 'Heavy Closed Cargo Container Truck',
   },
   {
     id: 'bike-transport',
@@ -45,7 +80,15 @@ export const services: Service[] = [
     title: 'Bike Transport',
     shortDesc: 'Secure two-wheeler transport, door to door.',
     description:
-      'Your motorcycle or scooter is transported safely in enclosed or open carriers with proper tie-down strapping, protective covers, and zero direct road exposure — delivered in the same condition it left.',
+      'We transport your motorcycle or scooter safely in specialized enclosed carriers with secure tie-down systems, protective bubble wrapping, and absolute protection against road debris or scratches.',
+    whatsIncluded: [
+      'Multi-layer bubble wrap & scratch-guard sheets',
+      'Heavy-duty secure ratchet strap locks',
+      'Pre-transport condition audit & photo documentation',
+      'Doorstep pickup and delivery service',
+    ],
+    estimatedTime: '3 – 5 Days (Interstate Transit)',
+    vehicleType: 'Enclosed Multi-Bike Cargo Carrier',
   },
   {
     id: 'car-transport',
@@ -53,7 +96,15 @@ export const services: Service[] = [
     title: 'Car Transport',
     shortDesc: 'Damage-free car relocation on enclosed carriers.',
     description:
-      'We move your car on a dedicated car carrier with full protective wrapping and secure loading. Whether you\'re relocating across states or need a vehicle delivered, your four-wheeler is in safe hands.',
+      'Get your sedan, SUV, or luxury car relocated safely using our specialized hydraulic loading car carriers. We ensure secure transit with full condition check documentation and insurance.',
+    whatsIncluded: [
+      'Full body dust-proof protective wrapping',
+      'Hydraulic ramp loading & wheel locking blocks',
+      'Pre-shipment odometer & inspection reports',
+      'Comprehensive transit insurance coverage',
+    ],
+    estimatedTime: '4 – 7 Days (Interstate Transit)',
+    vehicleType: 'Hydraulic Open/Closed Car Carrier Trailer',
   },
   {
     id: 'packing-unpacking',
@@ -61,7 +112,15 @@ export const services: Service[] = [
     title: 'Packing & Unpacking',
     shortDesc: 'Expert packing with premium materials.',
     description:
-      'Our packing specialists use layered bubble wrap, foam sheets, corrugated boards, and custom-sized cartons for every item type. We label everything clearly and unpack just as carefully at your destination.',
+      'Save time and ensure safety by letting our specialists pack your belongings. We use heavy-duty boxes, custom-cut foam, and clear labels, then carefully unwrap and place everything at your new location.',
+    whatsIncluded: [
+      'Premium bubble wrap, foam, tape & corrugated sheets',
+      'Custom sizing cartons for electronics & kitchenware',
+      'Fragile item packing & custom labeling',
+      'Unpacking & disposal of empty packing materials',
+    ],
+    estimatedTime: '4 – 6 Hours (For a typical 2BHK)',
+    vehicleType: 'N/A (Add-on Shifting Service)',
   },
   {
     id: 'loading-unloading',
@@ -69,7 +128,15 @@ export const services: Service[] = [
     title: 'Loading & Unloading',
     shortDesc: 'Skilled labour for all heavy-lifting needs.',
     description:
-      'Need just loading or unloading help? Our trained labour team handles all heavy lifting with proper techniques — no damaged walls, scratched floors, or strained backs. Safe for your belongings and the building.',
+      'Avoid back strain and property damage by letting our experienced lifters load or unload your truck. We use proper safety gear, ramps, and handling straps to safely carry heavy loads through tight spaces.',
+    whatsIncluded: [
+      'Trained 2-4 member heavy-lifting crew',
+      'Furniture moving blankets & floor/wall protectors',
+      'Staircase, narrow passage, and elevator handling',
+      'Proper weight distribution inside the vehicle',
+    ],
+    estimatedTime: '2 – 4 Hours (Depending on Shifting Load)',
+    vehicleType: 'N/A (Crew Service Only)',
   },
   {
     id: 'storage-solutions',
@@ -77,6 +144,14 @@ export const services: Service[] = [
     title: 'Storage Solutions',
     shortDesc: 'Short and long-term secure warehousing.',
     description:
-      'Our clean, secure warehouses offer flexible storage from a few days to several months. Goods are palletised, covered, and kept in a monitored environment. Ideal for in-between moves or temporary overflow.',
+      'Need storage between moves or temporary warehousing for extra items? We offer clean, modern, pest-controlled warehouse storage facilities with round-the-clock security and flexible renting periods.',
+    whatsIncluded: [
+      'CCTV monitored 24/7 warehouse facility',
+      'Clean, dry, pest-controlled storage vaults',
+      'Palletised stacking & dust protective wrapping',
+      'Flexible weekly or monthly rental agreements',
+    ],
+    estimatedTime: 'Flexible (Weekly/Monthly Rental)',
+    vehicleType: 'Pickup & Delivery Vehicle Available',
   },
 ]

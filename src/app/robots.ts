@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://manikanta-logistics.vercel.app/sitemap.xml',
+    sitemap: 'https://manikanta-packers-movers.vercel.app/sitemap.xml',
   }
 }

@@ -65,9 +65,8 @@ export default function Testimonials() {
               className="min-w-[80vw] sm:min-w-0 snap-start bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                {/* Rating and Service Details */}
-                <div className="flex items-center justify-between mb-3 sm:mb-4">
-                  <StarRating rating={t.rating} />
+                {/* Service Details */}
+                <div className="flex items-center justify-end mb-3 sm:mb-4">
                   <span className="text-[10px] font-bold text-[#F97316] bg-[#F97316]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                     {t.service}
                   </span>
@@ -85,6 +84,9 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <p className="font-bold text-[#0F172A] text-sm leading-tight">{t.name}</p>
+                  <div className="my-1">
+                    <StarRating rating={t.rating} />
+                  </div>
                   <p className="text-gray-400 text-xs mt-0.5">{t.city}</p>
                 </div>
               </div>

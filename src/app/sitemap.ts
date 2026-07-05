@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://manikanta-logistics.vercel.app',
+      url: 'https://manikanta-packers-movers.vercel.app',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,

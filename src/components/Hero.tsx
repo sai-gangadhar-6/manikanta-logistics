@@ -67,7 +67,7 @@ export default function Hero() {
             className="text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-3"
           >
             Manikanta{' '}
-            <span className="text-gradient">Logistics</span>
+            <span className="text-gradient">Packers &amp; Movers</span>
           </motion.h1>
 
           {/* Subheadline */}

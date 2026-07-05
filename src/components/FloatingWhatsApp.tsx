@@ -13,7 +13,7 @@ export default function FloatingWhatsApp() {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1.2, type: 'spring', stiffness: 200 }}
-      className="fixed right-5 z-50 w-14 h-14 rounded-full bg-green-500 shadow-2xl flex items-center justify-center wa-pulse"
+      className="hidden md:flex fixed right-5 z-50 w-14 h-14 rounded-full bg-green-500 shadow-2xl items-center justify-center wa-pulse"
       style={{ bottom: 'calc(1.5rem + env(safe-area-inset-bottom, 0px))' }}
     >
       <svg viewBox="0 0 32 32" width="30" height="30" fill="white">

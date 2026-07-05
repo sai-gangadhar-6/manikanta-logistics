@@ -1,4 +1,4 @@
-const CACHE_NAME = 'manikanta-logistics-v1';
+const CACHE_NAME = 'manikanta-packers-movers-v1';
 const OFFLINE_URL = '/offline.html';
 const PRECACHE_ASSETS = [
   '/',

@@ -8,9 +8,11 @@ const navLinks = [
   { label: 'Home',          href: '#home' },
   { label: 'About',         href: '#about' },
   { label: 'Services',      href: '#services' },
+  { label: 'Process',       href: '#process' },
   { label: 'Why Choose Us', href: '#why-us' },
   { label: 'Pricing',       href: '#pricing' },
   { label: 'Testimonials',  href: '#testimonials' },
+  { label: 'FAQ',           href: '#faq' },
   { label: 'Contact',       href: '#contact' },
 ]
 
@@ -84,10 +86,10 @@ export default function Header() {
       >
         <div className="container-wide flex items-center justify-between gap-4">
 
-          {/* â”€â”€ Wordmark â”€â”€ */}
+          {/* —— Wordmark —— */}
           <a
             href="#home"
-            aria-label="Manikanta Logistics â€“ Home"
+            aria-label="Manikanta Packers & Movers – Home"
             className="flex items-center gap-2.5 flex-shrink-0 group"
           >
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-orange-500 group-hover:bg-orange-600 transition-colors duration-200 flex items-center justify-center shadow-md">
@@ -95,11 +97,11 @@ export default function Header() {
             </div>
             <div className="leading-none">
               <span className="block font-bold text-white text-sm sm:text-[15px] tracking-tight">Manikanta</span>
-              <span className="block font-semibold text-orange-400 text-[10px] sm:text-xs tracking-[0.18em] uppercase">Logistics</span>
+              <span className="block font-semibold text-orange-400 text-[9px] sm:text-[10px] tracking-[0.08em] uppercase">Packers & Movers</span>
             </div>
           </a>
 
-          {/* â”€â”€ Desktop Nav â”€â”€ */}
+          {/* —— Desktop Nav —— */}
           <nav
             aria-label="Main navigation"
             className="hidden xl:flex items-center gap-1"
@@ -124,7 +126,7 @@ export default function Header() {
               className="btn-secondary !py-2.5 !px-4 !text-xs !bg-white/[0.08] !border-white/20 !text-white hover:!bg-white/15"
             >
               <Icons.phone className="w-3.5 h-3.5" />
-              +91 90527 22229
+              +91 9052722229
             </a>
             <a
               href="#enquiry"
@@ -218,7 +220,7 @@ export default function Header() {
                   </div>
                   <div className="leading-none">
                     <span className="block font-bold text-white text-sm">Manikanta</span>
-                    <span className="block font-semibold text-orange-400 text-[10px] tracking-[0.18em] uppercase">Logistics</span>
+                    <span className="block font-semibold text-orange-400 text-[9px] tracking-[0.08em] uppercase">Packers & Movers</span>
                   </div>
                 </div>
                 <button
@@ -266,7 +268,7 @@ export default function Header() {
                   className="flex items-center justify-center gap-2.5 w-full border border-white/20 text-white font-semibold py-3.5 rounded-xl hover:bg-white/[0.08] transition-colors duration-200 min-h-[52px]"
                 >
                   <Icons.phone className="w-4 h-4" />
-                  +91 90527 22229
+                  +91 9052722229
                 </a>
                 <a
                   href="#enquiry"

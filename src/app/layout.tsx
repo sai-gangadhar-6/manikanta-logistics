@@ -8,7 +8,7 @@ const inter = Inter({
   display: 'swap',
 })
 
-const siteUrl = 'https://manikanta-logistics.vercel.app'
+const siteUrl = 'https://manikanta-packers-movers.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
   },
   title: {
-    default: 'Manikanta Logistics – Trusted Packers & Movers | Safe, Reliable & Affordable',
-    template: '%s | Manikanta Logistics',
+    default: 'Manikanta Packers & Movers – Trusted Packers & Movers | Safe, Reliable & Affordable',
+    template: '%s | Manikanta Packers & Movers',
   },
   description:
-    'Manikanta Logistics offers professional packing and moving services across India — home shifting, office relocation, vehicle transport, and storage solutions. Call +91 9052722229 for a free quote.',
+    'Manikanta Packers & Movers offers professional packing and moving services across India — home shifting, office relocation, vehicle transport, and storage solutions. Call +91 9052722229 for a free quote.',
   keywords: [
     'packers and movers',
     'home shifting',
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     'bike transport',
     'storage solutions',
     'interstate moving',
-    'Manikanta Logistics',
+    'Manikanta Packers & Movers',
     'affordable movers Hyderabad',
     'local shifting',
     'packing unpacking services India',
   ],
-  authors: [{ name: 'Manikanta Logistics' }],
-  creator: 'Manikanta Logistics',
-  publisher: 'Manikanta Logistics',
+  authors: [{ name: 'Manikanta Packers & Movers' }],
+  creator: 'Manikanta Packers & Movers',
+  publisher: 'Manikanta Packers & Movers',
   robots: {
     index: true,
     follow: true,
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: siteUrl,
-    siteName: 'Manikanta Logistics',
-    title: 'Manikanta Logistics – Trusted Packers & Movers Across India',
+    siteName: 'Manikanta Packers & Movers',
+    title: 'Manikanta Packers & Movers – Trusted Packers & Movers Across India',
     description:
       'Safe, reliable & affordable packing and moving services. Home shifting, office relocation, vehicle transport, interstate moving. 500+ happy customers. Call +91 9052722229.',
     images: [
@@ -65,13 +65,13 @@ export const metadata: Metadata = {
         url: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=85&auto=format&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'Manikanta Logistics – Professional Packers and Movers',
+        alt: 'Manikanta Packers & Movers – Professional Packers and Movers',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Manikanta Logistics – Packers & Movers',
+    title: 'Manikanta Packers & Movers – Packers & Movers',
     description: 'Safe, reliable & affordable moving services across India. Free quote on WhatsApp.',
     images: ['https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=85&auto=format&fit=crop'],
   },
@@ -82,57 +82,39 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'MovingCompany',
-  name: 'Manikanta Logistics',
+  '@type': 'LocalBusiness',
+  name: 'Manikanta Packers & Movers',
   description:
     'Professional packing and moving services across India including home shifting, office relocation, vehicle transport, and storage solutions.',
   url: siteUrl,
   telephone: '+919052722229',
   email: 'manikantapackersandmovers@gmail.com',
-  foundingDate: '2014',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Hyderabad',
+    addressLocality: 'Hyderabad',
+    addressRegion: 'Telangana',
+    postalCode: '500001',
+    addressCountry: 'IN',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '07:00',
+      closes: '21:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Sunday'],
+      opens: '08:00',
+      closes: '18:00',
+    },
+  ],
+  priceRange: '₹4000 to ₹8000',
   areaServed: {
     '@type': 'Country',
     name: 'India',
-  },
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Hyderabad',
-    addressRegion: 'Telangana',
-    addressCountry: 'IN',
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+919052722229',
-    contactType: 'customer service',
-    availableLanguage: ['English', 'Telugu', 'Hindi'],
-    contactOption: 'TollFree',
-    hoursAvailable: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday',
-      ],
-      opens: '00:00',
-      closes: '23:59',
-    },
-  },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Packing and Moving Services',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Home Shifting' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Office Relocation' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Interstate Moving' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Car Transport' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bike Transport' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Storage Solutions' } },
-    ],
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
   },
 }
 
