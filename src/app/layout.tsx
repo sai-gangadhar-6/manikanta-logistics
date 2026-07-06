@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: 'Manikanta Packers & Movers',
     title: 'Manikanta Packers & Movers – Trusted Packers & Movers Across India',
     description:
-      'Safe, reliable & affordable packing and moving services. Home shifting, office relocation, vehicle transport, interstate moving. 500+ happy customers. Call +91 9052722229.',
+      'Safe, reliable & affordable packing and moving services. Home shifting, office relocation, vehicle transport, interstate moving. 1500+ happy customers. Call +91 9052722229.',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=85&auto=format&fit=crop',
@@ -91,10 +91,10 @@ const jsonLd = {
   email: 'manikantapackersandmovers@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Hyderabad',
-    addressLocality: 'Hyderabad',
-    addressRegion: 'Telangana',
-    postalCode: '500001',
+    streetAddress: 'Poranki',
+    addressLocality: 'Vijayawada',
+    addressRegion: 'Andhra Pradesh',
+    postalCode: '521137',
     addressCountry: 'IN',
   },
   openingHoursSpecification: [

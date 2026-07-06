@@ -12,7 +12,7 @@ const fadeUp: Variants = {
 const stats = [
   { value: '10+', label: 'Years of Experience' },
   { value: '50+', label: 'Cities Served' },
-  { value: '500+', label: 'Happy Customers' },
+  { value: '1500+', label: 'Happy Customers' },
   { value: '20+', label: 'Vehicles in Fleet' },
 ]
 
@@ -73,7 +73,7 @@ export default function About() {
             <motion.p variants={fadeUp} className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
               Founded with a single promise — to make every move stress-free — Manikanta Packers & Movers has grown
               into one of the most trusted packers and movers in South India. Over the past decade, we have
-              helped over 500 families and businesses relocate safely across 50+ cities, building lasting
+              helped over 1500+ families and businesses relocate safely across 50+ cities, building lasting
               relationships through honest pricing and meticulous care.
             </motion.p>
 

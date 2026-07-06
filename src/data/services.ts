@@ -43,22 +43,6 @@ export const services: Service[] = [
     vehicleType: 'Dedicated Large Closed Container Truck',
   },
   {
-    id: 'local-shifting',
-    icon: 'mappin',
-    title: 'Local Shifting',
-    shortDesc: 'Fast, affordable within-city moves.',
-    description:
-      'Moving across the street or to another neighborhood in the same city? Our local shifting service is quick, budget-friendly, and completely stress-free, matching the perfect truck size to your load.',
-    whatsIncluded: [
-      'Standard bubble wrap & packing blankets',
-      'Professional 2-3 member shifting team',
-      'Loading, local transit & safe unloading',
-      'Basic furniture positioning at new location',
-    ],
-    estimatedTime: '4 – 8 Hours (Same-Day Shifting)',
-    vehicleType: 'Tata Ace / Tata 407 (Open or Closed)',
-  },
-  {
     id: 'interstate-moving',
     icon: 'route',
     title: 'Interstate Moving',
@@ -105,38 +89,6 @@ export const services: Service[] = [
     ],
     estimatedTime: '4 – 7 Days (Interstate Transit)',
     vehicleType: 'Hydraulic Open/Closed Car Carrier Trailer',
-  },
-  {
-    id: 'packing-unpacking',
-    icon: 'box',
-    title: 'Packing & Unpacking',
-    shortDesc: 'Expert packing with premium materials.',
-    description:
-      'Save time and ensure safety by letting our specialists pack your belongings. We use heavy-duty boxes, custom-cut foam, and clear labels, then carefully unwrap and place everything at your new location.',
-    whatsIncluded: [
-      'Premium bubble wrap, foam, tape & corrugated sheets',
-      'Custom sizing cartons for electronics & kitchenware',
-      'Fragile item packing & custom labeling',
-      'Unpacking & disposal of empty packing materials',
-    ],
-    estimatedTime: '4 – 6 Hours (For a typical 2BHK)',
-    vehicleType: 'N/A (Add-on Shifting Service)',
-  },
-  {
-    id: 'loading-unloading',
-    icon: 'arrows',
-    title: 'Loading & Unloading',
-    shortDesc: 'Skilled labour for all heavy-lifting needs.',
-    description:
-      'Avoid back strain and property damage by letting our experienced lifters load or unload your truck. We use proper safety gear, ramps, and handling straps to safely carry heavy loads through tight spaces.',
-    whatsIncluded: [
-      'Trained 2-4 member heavy-lifting crew',
-      'Furniture moving blankets & floor/wall protectors',
-      'Staircase, narrow passage, and elevator handling',
-      'Proper weight distribution inside the vehicle',
-    ],
-    estimatedTime: '2 – 4 Hours (Depending on Shifting Load)',
-    vehicleType: 'N/A (Crew Service Only)',
   },
   {
     id: 'storage-solutions',

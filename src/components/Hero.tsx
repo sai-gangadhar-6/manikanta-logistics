@@ -9,7 +9,7 @@ const fadeUp: Variants = {
 }
 
 const trustBadges = [
-  '✓ 500+ Happy Customers',
+  '✓ 1500+ Happy Customers',
   '✓ Fully Insured',
   '✓ On-Time Delivery',
   '✓ 24/7 Support',

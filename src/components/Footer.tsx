@@ -201,7 +201,7 @@ export default function Footer() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">
                   Office
                 </p>
-                <p className="text-sm text-slate-400 font-medium">Hyderabad, Telangana, India</p>
+                <p className="text-sm text-slate-400 font-medium">Poranki, Vijayawada, Andhra Pradesh, India</p>
               </li>
             </ul>
           </div>

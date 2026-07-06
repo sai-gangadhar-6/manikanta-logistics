@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 
 const metrics = [
   { value: '10+', label: 'Years of Experience' },
-  { value: '500+', label: 'Happy Customers' },
+  { value: '1500+', label: 'Happy Customers' },
   { value: '50+', label: 'Cities Served' },
   { value: '20+', label: 'Vehicles Available' },
-  { value: '1,000+', label: 'Successful Deliveries' },
+  { value: '1700+', label: 'Successful Deliveries' },
 ]
 
 export default function TrustStats() {

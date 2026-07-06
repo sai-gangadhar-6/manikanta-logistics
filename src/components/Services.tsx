@@ -33,8 +33,8 @@ export default function Services() {
           <div className="w-16 h-1 bg-[#F97316] mx-auto rounded-full mt-5" />
         </motion.div>
 
-        {/* Grid — 1-col on mobile, 2-col sm, 3-col lg */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        {/* Grid — 2-col on mobile, 3-col on desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-6">
           {services.map((service, i) => {
             const IconComponent = Icons[service.icon as IconName]
             return (
@@ -46,7 +46,7 @@ export default function Services() {
                 viewport={{ once: true, margin: '-60px' }}
                 variants={cardVariant}
                 whileHover={{ y: -6, boxShadow: '0 12px 32px rgba(0,0,0,0.12)' }}
-                className="bg-white border border-gray-100 rounded-2xl p-5 sm:p-6 shadow-sm cursor-default group transition-all duration-300 flex flex-col justify-between"
+                className="bg-white border border-gray-100 rounded-2xl p-4 sm:p-6 shadow-sm cursor-default group transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#F97316]/10 text-[#F97316] flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-[#F97316]/20 group-hover:scale-105 transition-all duration-300">

@@ -43,37 +43,4 @@ export const testimonials: Testimonial[] = [
     initials: 'SV',
     avatarColor: 'bg-green-600',
   },
-  {
-    id: 't4',
-    name: 'Anitha Patel',
-    city: 'Chennai → Vijayawada',
-    service: 'Office Relocation',
-    rating: 5,
-    review:
-      'We relocated our 40-person office over a single weekend with zero loss of workdays. Manikanta\'s team was organised, careful with our computer equipment, and had everything set up at the new premises exactly where we asked.',
-    initials: 'AP',
-    avatarColor: 'bg-rose-600',
-  },
-  {
-    id: 't5',
-    name: 'Mohammed Imran',
-    city: 'Hyderabad → Vizag',
-    service: 'Home Shifting + Storage',
-    rating: 4,
-    review:
-      'Used their storage facility for 3 weeks while our new home was being painted. The warehouse was clean, well-maintained, and the goods came back in perfect condition. Reasonable pricing and very cooperative team throughout.',
-    initials: 'MI',
-    avatarColor: 'bg-amber-600',
-  },
-  {
-    id: 't6',
-    name: 'Deepak Rao',
-    city: 'Bengaluru → Chennai',
-    service: 'Home Shifting',
-    rating: 5,
-    review:
-      'Very professional shifting service. The packing team was disciplined, wrapped all my electronic appliances with foam and bubble wrap, and loaded them with care. The truck arrived exactly on time in Chennai without any delays. Highly recommended!',
-    initials: 'DR',
-    avatarColor: 'bg-indigo-600',
-  },
 ]
