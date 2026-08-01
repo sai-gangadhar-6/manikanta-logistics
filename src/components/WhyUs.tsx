@@ -4,9 +4,12 @@ import { motion, Variants } from 'framer-motion'
 import {
   HardHat,
   Shield,
+  Navigation,
   IndianRupee,
   Clock,
   Headphones,
+  ShieldCheck,
+  Globe,
   MessageCircle,
 } from 'lucide-react'
 
@@ -20,6 +23,11 @@ const features = [
     icon: Shield,
     title: 'Secure Packing',
     desc: 'Premium bubble wrap, corrugated sheets, and custom boxes for safe transit.',
+  },
+  {
+    icon: Navigation,
+    title: 'GPS-Enabled Vehicles',
+    desc: 'Real-time location visibility for all our transport vehicles during your move.',
   },
   {
     icon: IndianRupee,
@@ -36,39 +44,49 @@ const features = [
     title: '24/7 Customer Support',
     desc: 'Our team is always available to answer questions and resolve concerns any time.',
   },
+  {
+    icon: ShieldCheck,
+    title: 'Damage-Free Guarantee',
+    desc: 'We take full accountability for every item we handle. Our careful packing techniques and trained crew ensure your belongings arrive in the same condition they left.',
+  },
+  {
+    icon: Globe,
+    title: 'Pan-India Network',
+    desc: 'Serving over 50 cities across all major Indian states with a reliable network of vehicles, warehouses, and trained local partners for seamless door-to-door delivery.',
+  },
 ]
 
 const cardVariant: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: 'easeOut', delay: i * 0.08 },
+    transition: { duration: 0.45, ease: 'easeOut', delay: i * 0.08 },
   }),
 }
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="section-gray py-10 lg:py-20 bg-[#F8FAFC]">
+    <section id="why-us" className="section-gray py-16 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-6 lg:mb-8"
+          className="text-center mb-10 lg:mb-14"
         >
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#F97316] mb-2">Our Advantage</span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] mb-3">Why Choose Us?</h2>
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#F97316] mb-3">Our Advantage</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] mb-4">Why Choose Us?</h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base">
-            Thousands of families and businesses trust Manikanta Packers &amp; Movers for every move — here&apos;s why.
+            Thousands of families and businesses trust Manikanta Packers & Movers for every move — here&apos;s why.
           </p>
-          <div className="w-16 h-1 bg-[#F97316] mx-auto rounded-full mt-4" />
+          <div className="w-16 h-1 bg-[#F97316] mx-auto rounded-full mt-5" />
         </motion.div>
 
-        {/* Grid — 1-col on xs, 2-col sm (5th spans 2), 5-col lg */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 relative z-10">
+        {/* Grid — 1-col on xs, 2-col sm, 4-col lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {features.map((feature, i) => {
             const FeatureIcon = feature.icon
             return (
@@ -81,33 +99,13 @@ export default function WhyUs() {
                 variants={cardVariant}
                 whileHover={{ y: -4 }}
                 whileTap={{ scale: 0.97 }}
-                className={`relative bg-white rounded-2xl px-5 py-4 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center z-10 ${
-                  i === 4 ? 'sm:col-span-2 lg:col-span-1' : ''
-                }`}
+                className="bg-white rounded-2xl p-5 sm:p-7 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex gap-4 sm:gap-5"
               >
-                {/* Horizontal line for desktop (Y-center of 48px circle is 24px Y-offset + 16px top padding = 40px) */}
-                {i < features.length - 1 && (
-                  <div
-                    className="hidden lg:block absolute left-1/2 w-[calc(100%+1.5rem)] h-0.5 border-t border-dashed border-[#F97316]/30 z-0"
-                    style={{ top: '40px' }}
-                  />
-                )}
-
-                {/* Vertical line for mobile Y-center of 44px/48px circle starts at 38px/40px, runs down to next Y-center */}
-                {i < features.length - 1 && (
-                  <div
-                    className="absolute top-[38px] sm:top-[40px] left-1/2 -translate-x-1/2 w-0.5 border-l border-dashed border-[#F97316]/30 z-0 h-[calc(100%+1rem)] sm:h-[calc(100%+1.5rem)] lg:hidden"
-                  />
-                )}
-
-                {/* Icon Circle */}
-                <div className="relative z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-[#F97316]/30 flex items-center justify-center mb-3 shadow-xs">
+                <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#F97316]/10 flex items-center justify-center">
                   <FeatureIcon className="w-5 h-5 sm:w-6 sm:h-6 text-[#F97316]" strokeWidth={2} />
                 </div>
-
-                {/* Text Details */}
                 <div>
-                  <h3 className="font-bold text-[#0F172A] text-sm sm:text-base mb-1">{feature.title}</h3>
+                  <h3 className="font-bold text-[#0F172A] text-sm sm:text-base mb-1.5">{feature.title}</h3>
                   <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">{feature.desc}</p>
                 </div>
               </motion.div>
@@ -121,7 +119,7 @@ export default function WhyUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-8 lg:mt-10 text-center"
+          className="mt-12 text-center"
         >
           <a
             href="https://wa.me/917382355966"

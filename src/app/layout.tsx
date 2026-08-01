@@ -1,15 +1,3 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import PWAController from '@/components/PWAController'
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-const siteUrl = 'https://manikanta-packers-movers.vercel.app'
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   manifest: '/manifest.json',
@@ -41,6 +29,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Manikanta Packers & Movers' }],
   creator: 'Manikanta Packers & Movers',
   publisher: 'Manikanta Packers & Movers',
+
+  verification: {
+    google: 'Tg02ASLR_0-ZKSdkTWUTnVG8dg4fsvhIaIcLtf2yO-4',
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -72,72 +65,13 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Manikanta Packers & Movers – Packers & Movers',
-    description: 'Safe, reliable & affordable moving services across India. Free quote on WhatsApp.',
-    images: ['https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=85&auto=format&fit=crop'],
+    description:
+      'Safe, reliable & affordable moving services across India. Free quote on WhatsApp.',
+    images: [
+      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=85&auto=format&fit=crop',
+    ],
   },
   alternates: {
     canonical: siteUrl,
   },
-}
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Manikanta Packers & Movers',
-  description:
-    'Professional packing and moving services across India including home shifting, office relocation, vehicle transport, and storage solutions.',
-  url: siteUrl,
-  telephone: '+919052722229',
-  email: 'manikantapackersandmovers@gmail.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Poranki',
-    addressLocality: 'Vijayawada',
-    addressRegion: 'Andhra Pradesh',
-    postalCode: '521137',
-    addressCountry: 'IN',
-  },
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '07:00',
-      closes: '21:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Sunday'],
-      opens: '08:00',
-      closes: '18:00',
-    },
-  ],
-  priceRange: '₹4000 to ₹8000',
-  areaServed: {
-    '@type': 'Country',
-    name: 'India',
-  },
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#0F172A" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className={`${inter.className} bg-white text-slate-700 antialiased`}>
-        {children}
-        <PWAController />
-      </body>
-    </html>
-  )
 }
