@@ -66,8 +66,10 @@ export default function Hero() {
             variants={fadeUp}
             className="text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-3"
           >
-            Manikanta{' '}
-            <span className="text-gradient">Packers &amp; Movers</span>
+            Best{' '}
+<span className="text-gradient">Packers &amp; Movers</span>
+<br />
+<span className="text-white">in Vijayawada</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -75,17 +77,18 @@ export default function Hero() {
             variants={fadeUp}
             className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-200 mb-3 leading-snug"
           >
-            Safe, Reliable &amp; Affordable<br className="sm:hidden" /> Packers and Movers
+            Trusted Packers &amp; Movers<br className="sm:hidden" /> in Vijayawada
           </motion.p>
 
           {/* Description */}
           <motion.p
-            variants={fadeUp}
-            className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-8 leading-relaxed"
-          >
-            Stress-free relocation anywhere in India — your belongings handled with care
-            by trained professionals, delivered on time, every time.
-          </motion.p>
+  variants={fadeUp}
+  className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-8 leading-relaxed"
+>
+  Professional home shifting, office relocation, bike transport, car transport,
+  warehouse storage, and interstate moving services in Vijayawada. Safe packing,
+  affordable pricing, secure transportation, and on-time delivery across India.
+</motion.p>
 
           {/* CTAs — stacked on mobile, row from ~480px */}
           <motion.div
