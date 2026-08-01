@@ -1,3 +1,14 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import PWAController from '@/components/PWAController'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const siteUrl = 'https://manikanta-packers-movers.vercel.app'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   manifest: '/manifest.json',
@@ -74,4 +85,34 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+}
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Manikanta Packers & Movers',
+  description:
+    'Professional packing and moving services across India including home shifting, office relocation, vehicle transport, and storage solutions.',
+  url: siteUrl,
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+
+      <body className={`${inter.className} bg-white text-slate-700 antialiased`}>
+        {children}
+        <PWAController />
+      </body>
+    </html>
+  )
 }
