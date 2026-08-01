@@ -103,11 +103,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
+  <meta
+    name="google-site-verification"
+    content="Tg02ASLR_0-ZKSdkTWUTnVG8dg4fsvhIaIcLtf2yO-4"
+  />
+
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+  />
+</head>
 
       <body className={`${inter.className} bg-white text-slate-700 antialiased`}>
         {children}
