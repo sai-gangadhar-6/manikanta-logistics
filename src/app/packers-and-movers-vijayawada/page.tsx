@@ -106,3 +106,52 @@ export default function VijayawadaPage() {
     </main>
   );
 }
+<section className="py-20 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <h2 className="text-4xl font-bold text-center mb-12">
+      Why Choose Manikanta Packers & Movers?
+    </h2>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div className="bg-white rounded-xl shadow p-6">
+        <h3 className="text-xl font-semibold mb-3">
+          Safe Packing
+        </h3>
+        <p>
+          High-quality packing materials to protect your belongings during transport.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-xl shadow p-6">
+        <h3 className="text-xl font-semibold mb-3">
+          Affordable Pricing
+        </h3>
+        <p>
+          Transparent pricing with no hidden charges and free quotations.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-xl shadow p-6">
+        <h3 className="text-xl font-semibold mb-3">
+          On-Time Delivery
+        </h3>
+        <p>
+          Reliable transportation with timely pickup and delivery schedules.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-xl shadow p-6">
+        <h3 className="text-xl font-semibold mb-3">
+          24/7 Support
+        </h3>
+        <p>
+          Our team is available to assist you before, during and after your move.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
