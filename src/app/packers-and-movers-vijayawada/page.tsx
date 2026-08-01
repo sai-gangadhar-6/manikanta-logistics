@@ -1,3 +1,38 @@
+<main className="bg-white">
+
+  <section className="bg-slate-900 text-white py-20">
+    <div className="max-w-6xl mx-auto px-6 text-center">
+
+      <h1 className="text-5xl font-bold mb-6">
+        Best Packers and Movers in Vijayawada
+      </h1>
+
+      <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+        Trusted home shifting, office relocation, bike transport,
+        car transport, packing and moving services in Vijayawada
+        with affordable pricing and secure delivery.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <a
+          href="tel:+919052722229"
+          className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
+        >
+          📞 Call Now
+        </a>
+
+        <a
+          href="https://wa.me/919052722229"
+          className="border border-orange-500 px-8 py-4 rounded-xl font-bold"
+        >
+          WhatsApp Quote
+        </a>
+
+      </div>
+
+    </div>
+  </section>
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
