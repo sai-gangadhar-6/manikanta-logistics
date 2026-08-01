@@ -8,7 +8,7 @@ const inter = Inter({
   display: 'swap',
 })
 
-const siteUrl = 'https://manikanta-packers-movers.vercel.app'
+const siteUrl = 'https://manikanta-logistics.vercel.app'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   manifest: '/manifest.json',
